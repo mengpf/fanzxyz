@@ -1,31 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>FanzのXYZ</title>
-    <!-- CSS -->
-    <link href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet">
-    <!-- Js-->
-    <script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <title>樊山子的个人博客</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link href="//cdn.bootcss.com/viewerjs/0.10.0/viewer.min.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container-fluid">
-	<div class="row-fluid text-center " >
-		<div class="span12">
-			<p></p>
-			<img src="https://avatars0.githubusercontent.com/u/16414599?v=3&s=140" class="img-circle" />
-			<div class="row-fluid">
-				<div class="span12">
-					<strong>彼岸星辰</strong><span class="badge badge-success">beta</span>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+    <div id="app"></div>
+    <script>
+      window.username = 'mengpf' // 你的 github 账户名
+      window.reponame = 'mengpf.github.io' // 你用来存放博客的仓库名
+      window.links = [
+        // 头部导航链接
+        ['主页', 'https://blog.simplenaive.cn']
+      ]
+      window.friendLinks = [
+        // 友情链接
+        ['DragonZZZ', 'http://dragonzzzz.github.io']
+      ]
+      window.motto = 'Yidadaa' // banner的文字
+      window.viewerConfig = {
+        // 图片查看器的配置，详情请查阅viewerjs的文档
+        navbar: false,
+        toolbar: {
+          prev: 0,
+          play: { show: 0 },
+          next: 0,
+          rotateLeft: 0,
+          rotateRight: 0,
+          flipHorizontal: 0,
+          flipVertical: 0,
+          zoomIn: 1,
+          zoomOut: 1,
+          oneToOne: 1,
+          reset: 1
+        }
+      }
+    </script>
+    <script src="//cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
+    <script src="//cdn.bootcss.com/babel-polyfill/6.26.0/polyfill.min.js"></script>
+    <script src="//blog.simplenaive.cn/Issue-Blog/dist/build.js"></script>
+    <script src="//cdn.bootcss.com/viewerjs/0.10.0/viewer.min.js"></script>
   </body>
 </html>
