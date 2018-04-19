@@ -1,46 +1,47 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-  <head>
-    <meta charset="utf-8">
-    <title>樊山子的个人博客</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <link href="//cdn.bootcss.com/viewerjs/0.10.0/viewer.min.css" rel="stylesheet">
-  </head>
-  <body>
-    <div id="app"></div>
-    <script>
-      window.username = 'mengpf' // 你的 github 账户名
-      window.reponame = 'mengpf.github.io' // 你用来存放博客的仓库名
-      window.links = [
-        // 头部导航链接
-        ['主页', 'http://mengpf.github.io']
-      ]
-      window.friendLinks = [
-        // 友情链接
-        ['樊山子', 'http://mengpf.github.io']
-      ]
-      window.motto = '樊山子' // banner的文字
-      window.viewerConfig = {
-        // 图片查看器的配置，详情请查阅viewerjs的文档
-        navbar: false,
-        toolbar: {
-          prev: 0,
-          play: { show: 0 },
-          next: 0,
-          rotateLeft: 0,
-          rotateRight: 0,
-          flipHorizontal: 0,
-          flipVertical: 0,
-          zoomIn: 1,
-          zoomOut: 1,
-          oneToOne: 1,
-          reset: 1
-        }
-      }
-    </script>
-    <script src="//cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
-    <script src="//cdn.bootcss.com/babel-polyfill/6.26.0/polyfill.min.js"></script>
-    <script src="//blog.simplenaive.cn/Issue-Blog/dist/build.js"></script>
-    <script src="//cdn.bootcss.com/viewerjs/0.10.0/viewer.min.js"></script>
-  </body>
+<html lang="en" class="loading">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<title> Loading... </title>
+<script>
+/*
+** if organization repository, set 'organization' to true
+** blog config here
+** token should be separated by '#'
+** example: 5#c31bffc137f44faf7efc4a84da827g7ca2cfeaa
+** muti-authors should be separated by ','. and the user is included in
+** example: 'LoeiFy, author0'
+**
+*/
+
+window.config = {"organization":false,"order":"CREATED_AT","title":"唯吾志","user":"mengpf","repository":"mengpf.github.io","authors":"","token":"3#562cc1c071b41a36e34d569eb032f43d2ed82f7","perpage":5}
+</script>
+
+<script>
+var ua = window.navigator.userAgent
+if (ua.indexOf('MSIE') > -1 || ua.match(/Trident\/7\./)) {
+  var head = document.getElementsByTagName('head')[0]
+  var script = document.createElement('script')
+  script.type = 'text/javascript'
+  script.src = 'promise.js'
+  head.appendChild(script)
+}
+</script>
+
+<style>.error,.loading,.transition{height:100%}.error body,.loading body,.transition body{height:100%}#loader{text-align:center;position:fixed;z-index:3;left:0;top:0;height:100%;width:100%;opacity:0;visibility:hidden;-webkit-transition:all .3s ease;transition:all .3s ease;background-color:rgba(255,255,255,.95)}.loading #loader{opacity:1;visibility:visible}.loading #loader div{display:inline-block;width:50px;height:50px;vertical-align:middle;-webkit-border-radius:3px;border-radius:3px;background-color:#fff;-webkit-box-shadow:0 0 3px rgba(0,0,0,.15);box-shadow:0 0 3px rgba(0,0,0,.15)}.loading #loader div:before{content:'';width:26px;height:26px;display:block;margin:8px auto 0;-webkit-border-radius:20px;border-radius:20px;-webkit-animation:loading .5s linear forwards infinite;animation:loading .5s linear forwards infinite;border-top:4px solid #0089fa;border-right:4px solid #ff002b;border-bottom:4px solid #ffa900;border-left:4px solid #00a753}.loading #loader:after{content:'';display:inline-block;height:100%;vertical-align:middle}@keyframes loading{100%{transform:rotate(360deg)}}@-webkit-keyframes loading{100%{-webkit-transform:rotate(360deg)}}</style>
+</head>
+<body>
+  <div class="page home">
+    <div id="user"></div>
+    <div id="posts"></div>
+  </div>
+  <div class="page single">
+    <div id="post"></div>
+    <div id="comments"></div>
+  </div>
+  <div id="loader"><div></div></div>
+<script type="text/javascript" src="build.fcbd058b.js"></script></body>
 </html>
